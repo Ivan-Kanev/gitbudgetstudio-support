@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GitBudget</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+:root {
+  --accent: #4da3ff;
+  --bg: #0b0d10;
+  --text: #ffffff;
+  --muted: #a6a6a6;
+  --glass: rgba(255,255,255,0.08);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  background:
+    radial-gradient(800px 500px at 10% -10%, #10243a, transparent),
+    radial-gradient(900px 600px at 90% 10%, #0b1c2d, transparent),
+    var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 14px 32px;
+  backdrop-filter: blur(14px);
+  background: rgba(0,0,0,0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 10;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 14px;
+}
+
+header a:hover { color: var(--text); }
+
+/* HERO */
+.hero {
+  padding: 150px 24px 80px;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 28px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #4da3ff, #2b6fff);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 90px 24px;
+}
+
+.section h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--glass);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 22px;
+  backdrop-filter: blur(14px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 14px;
+}
+
+.card h3 {
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* FOOTER */
+footer {
+  padding: 50px 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <strong>GitBudget</strong>
+    <div>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>See Your Income.<br>Control Your Money.</h1>
+    <p>
+      GitBudget is a modern personal finance app that focuses on clarity,
+      trends, and visual understanding — not spreadsheets.
+    </p>
+    <a class="cta" href="#">Download on the App Store</a>
+  </div>
+
+  <!-- MAIN IMAGE -->
+  <img src="assets/income.png" alt="Income overview">
+</section>
+
+<section class="section">
+  <h2>Powerful, Visual Features</h2>
+
+  <div class="cards">
+    <div class="card">
+      <img src="assets/outcomes.png" alt="Expenses">
+      <h3>Expenses Overview</h3>
+      <p>Understand where your money goes with clean, readable breakdowns.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/history.png" alt="History">
+      <h3>Smart History</h3>
+      <p>Edit, duplicate, and explore transactions with smooth gestures.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/trend.png" alt="Trends">
+      <h3>Trends & Insights</h3>
+      <p>Spot patterns over time and make better financial decisions.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/sources_drains.png" alt="Sources and Drains">
+      <h3>Sources & Drains</h3>
+      <p>Instantly see what fuels your balance — and what drains it.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/bar.png" alt="Charts">
+      <h3>Clear Charts</h3>
+      <p>Beautiful, readable charts designed for real understanding.</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/add.png" alt="Add transaction">
+      <h3>Fast Entry</h3>
+      <p>Add transactions in seconds with a clean, focused flow.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 GitBudget · Crafted with care
+</footer>
+
+</body>
+</html>
