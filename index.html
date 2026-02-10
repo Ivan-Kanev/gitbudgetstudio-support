@@ -20,7 +20,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
   background:
-    radial-gradient(800px 500px at 10% -10%, #10243a, transparent),
+    radial-gradient(900px 600px at 10% -10%, #10243a, transparent),
     radial-gradient(900px 600px at 90% 10%, #0b1c2d, transparent),
     var(--bg);
   color: var(--text);
@@ -32,7 +32,7 @@ header {
   top: 0;
   width: 100%;
   padding: 14px 32px;
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(16px);
   background: rgba(0,0,0,0.35);
   border-bottom: 1px solid rgba(255,255,255,0.08);
   z-index: 10;
@@ -55,12 +55,12 @@ header a:hover { color: var(--text); }
 
 /* HERO */
 .hero {
-  padding: 150px 24px 80px;
+  padding: 150px 24px 90px;
   max-width: 1100px;
   margin: auto;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 40px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -76,25 +76,30 @@ header a:hover { color: var(--text); }
   max-width: 520px;
 }
 
-.cta {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 28px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #4da3ff, #2b6fff);
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-}
-
 .hero img {
   width: 100%;
   border-radius: 24px;
-  box-shadow: 0 30px 80px rgba(0,0,0,0.45);
   border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.5);
 }
 
-/* SECTIONS */
+/* APP STORE BADGE */
+.appstore-badge {
+  display: inline-block;
+  margin-top: 32px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.appstore-badge img {
+  height: 54px;
+}
+
+.appstore-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(77,163,255,0.35);
+}
+
+/* FEATURES */
 .section {
   max-width: 1100px;
   margin: auto;
@@ -162,60 +167,70 @@ footer {
   <div>
     <h1>See Your Income.<br>Control Your Money.</h1>
     <p>
-      GitBudget is a modern personal finance app that focuses on clarity,
+      GitBudget is a modern personal finance app focused on clarity,
       trends, and visual understanding — not spreadsheets.
     </p>
-    <a class="cta" href="#">Download on the App Store</a>
+
+    <a
+      class="appstore-badge"
+      href="https://apps.apple.com/"
+      target="_blank"
+      rel="noopener"
+    >
+      <img
+        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+        alt="Download on the App Store"
+      >
+    </a>
   </div>
 
-  <!-- MAIN IMAGE -->
-  <img src="assets/incomes.png" alt="Income overview">
+  <img src="./assets/incomes.png" alt="Income overview">
 </section>
 
 <section class="section">
-  <h2>Powerful, Visual Features</h2>
+  <h2>Powerful Visual Features</h2>
 
   <div class="cards">
     <div class="card">
-      <img src="assets/outcomes.png" alt="Expenses">
+      <img src="./assets/outcomes.png">
       <h3>Expenses Overview</h3>
-      <p>Understand where your money goes with clean, readable breakdowns.</p>
+      <p>Understand exactly where your money goes.</p>
     </div>
 
     <div class="card">
-      <img src="assets/history.png" alt="History">
+      <img src="./assets/history.png">
       <h3>Smart History</h3>
-      <p>Edit, duplicate, and explore transactions with smooth gestures.</p>
+      <p>Edit, duplicate, and manage transactions effortlessly.</p>
     </div>
 
     <div class="card">
-      <img src="assets/trend.png" alt="Trends">
-      <h3>Trends & Insights</h3>
-      <p>Spot patterns over time and make better financial decisions.</p>
+      <img src="./assets/trend.png">
+      <h3>Trends</h3>
+      <p>Spot patterns and long-term behavior at a glance.</p>
     </div>
 
     <div class="card">
-      <img src="assets/sources_drains.png" alt="Sources and Drains">
+      <img src="./assets/sources_drains.png">
       <h3>Sources & Drains</h3>
-      <p>Instantly see what fuels your balance — and what drains it.</p>
+      <p>See what fuels your balance — and what drains it.</p>
     </div>
 
     <div class="card">
-      <img src="assets/bar.png" alt="Charts">
-      <h3>Clear Charts</h3>
-      <p>Beautiful, readable charts designed for real understanding.</p>
+      <img src="./assets/bar.png">
+      <h3>Charts</h3>
+      <p>Clean, readable charts designed for clarity.</p>
     </div>
 
     <div class="card">
-      <img src="assets/add.png" alt="Add transaction">
+      <img src="./assets/add.png">
       <h3>Fast Entry</h3>
-      <p>Add transactions in seconds with a clean, focused flow.</p>
+      <p>Add transactions in seconds with a focused flow.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2026 GitBudget · Crafted with care
+  © 2026 GitBudget · Designed with care
 </footer>
 
 </body>
